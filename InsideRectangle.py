@@ -32,10 +32,10 @@ class InsideRectangle:
             raise TypeError(
                 "InsideRectangle.py __init__ offset - must be a float."
             )
-        #if offset < 0:
-            #raise ValueError(
-                #"InsideRectangle.py __init__ offset - must be greater than 0."
-            #)
+        if offset <= 0:
+            raise ValueError(
+                "InsideRectangle.py __init__ offset - must be greater than 0."
+            )
         if type(x_centroid) is not float:
             raise TypeError(
                 "InsideRectangle.py __init__ x_centroid - must be a float."
@@ -68,7 +68,6 @@ class InsideRectangle:
     def get_y_centroid(self):
         return self.__y_centroid
     
-    # Top right, bottom right, bottom left, top left
     def rectangle_points_clockwise(self):
         top_left_point = (self.__x_centroid - (self.__width / 2), self.__x_centroid + (self.__height / 2))
         top_right_point = (self.__x_centroid + (self.__width / 2), self.__x_centroid + (self.__height / 2))
@@ -77,7 +76,6 @@ class InsideRectangle:
         
         return [top_right_point, bottom_right_point, bottom_left_point, top_left_point]
     
-    # Top left, bottom left, bottom right, top right
     def rectangle_points_counterclockwise(self):
         top_left_point = (self.__x_centroid - (self.__width / 2), self.__x_centroid + (self.__height / 2))
         top_right_point = (self.__x_centroid + (self.__width / 2), self.__x_centroid + (self.__height / 2))

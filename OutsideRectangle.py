@@ -32,10 +32,18 @@ class OutsideRectangle:
             raise TypeError(
                 "OutsideRectangle.py __init__ offset - must be a float."
             )
-        #if offset < 0:
-            #raise ValueError(
-                #"OutsideRectangle.py __init__ offset - must be greater than 0."
-            #)
+        if offset <= 0:
+            raise ValueError(
+                "OutsideRectangle.py __init__ offset - must be a positive value."
+            )
+        if width - (offset * 4) <= 0:
+            raise ValueError(
+                "OutsideRectangle.py __init__ offset - must be less than 1/4th the width."
+            )        
+        if height - (offset * 4) <= 0:
+            raise ValueError(
+                "OutsideRectangle.py __init__ offset - must be less than 1/4th the height."
+            )           
         if type(x_centroid) is not float:
             raise TypeError(
                 "OutsideRectangle.py __init__ x_centroid - must be a float."
