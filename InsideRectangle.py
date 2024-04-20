@@ -68,19 +68,19 @@ class InsideRectangle:
     def get_y_centroid(self):
         return self.__y_centroid
     
-    def rectangle_points_clockwise(self):
-        top_left_point = (self.__x_centroid - (self.__width / 2), self.__x_centroid + (self.__height / 2))
-        top_right_point = (self.__x_centroid + (self.__width / 2), self.__x_centroid + (self.__height / 2))
-        bottom_left_point = (self.__x_centroid - (self.__width / 2), self.__x_centroid - (self.__height / 2))
-        bottom_right_point = (self.__x_centroid + (self.__width / 2), self.__x_centroid - (self.__height / 2))
+    def rectangle_points_clockwise(self):    
+        top_left_point = (self.__x_centroid - (self.__width / 2), self.__y_centroid + (self.__height / 2))
+        top_right_point = (self.__x_centroid + (self.__width / 2), self.__y_centroid + (self.__height / 2))
+        bottom_left_point = (self.__x_centroid - (self.__width / 2), self.__y_centroid - (self.__height / 2))
+        bottom_right_point = (self.__x_centroid + (self.__width / 2), self.__y_centroid - (self.__height / 2))
         
         return [top_right_point, bottom_right_point, bottom_left_point, top_left_point]
     
     def rectangle_points_counterclockwise(self):
-        top_left_point = (self.__x_centroid - (self.__width / 2), self.__x_centroid + (self.__height / 2))
-        top_right_point = (self.__x_centroid + (self.__width / 2), self.__x_centroid + (self.__height / 2))
-        bottom_left_point = (self.__x_centroid - (self.__width / 2), self.__x_centroid - (self.__height / 2))
-        bottom_right_point = (self.__x_centroid + (self.__width / 2), self.__x_centroid - (self.__height / 2))
+        top_left_point = (self.__x_centroid - (self.__width / 2), self.__y_centroid + (self.__height / 2))
+        top_right_point = (self.__x_centroid + (self.__width / 2), self.__y_centroid + (self.__height / 2))
+        bottom_left_point = (self.__x_centroid - (self.__width / 2), self.__y_centroid - (self.__height / 2))
+        bottom_right_point = (self.__x_centroid + (self.__width / 2), self.__y_centroid - (self.__height / 2))
         
         return [top_left_point, bottom_left_point, bottom_right_point, top_right_point]
     
@@ -88,10 +88,10 @@ class InsideRectangle:
         dashed_width = self.__width + (self.__offset * 2)
         dashed_height = self.__height + (self.__offset * 2)
         
-        top_left_point = (self.__x_centroid - (dashed_width / 2), self.__x_centroid + (dashed_height / 2))
-        top_right_point = (self.__x_centroid + (dashed_width / 2), self.__x_centroid + (dashed_height / 2))
-        bottom_left_point = (self.__x_centroid - (dashed_width / 2), self.__x_centroid - (dashed_height / 2))
-        bottom_right_point = (self.__x_centroid + (dashed_width / 2), self.__x_centroid - (dashed_height / 2))
+        top_left_point = (self.__x_centroid - (dashed_width / 2), self.__y_centroid + (dashed_height / 2))
+        top_right_point = (self.__x_centroid + (dashed_width / 2), self.__y_centroid + (dashed_height / 2))
+        bottom_left_point = (self.__x_centroid - (dashed_width / 2), self.__y_centroid - (dashed_height / 2))
+        bottom_right_point = (self.__x_centroid + (dashed_width / 2), self.__y_centroid - (dashed_height / 2))
         
         return [top_right_point, bottom_right_point, bottom_left_point, top_left_point]
     
@@ -99,10 +99,10 @@ class InsideRectangle:
         dashed_width = self.__width + (self.__offset * 2)
         dashed_height = self.__height + (self.__offset * 2)
         
-        top_left_point = (self.__x_centroid - (dashed_width / 2), self.__x_centroid + (dashed_height / 2))
-        top_right_point = (self.__x_centroid + (dashed_width / 2), self.__x_centroid + (dashed_height / 2))
-        bottom_left_point = (self.__x_centroid - (dashed_width / 2), self.__x_centroid - (dashed_height / 2))
-        bottom_right_point = (self.__x_centroid + (dashed_width / 2), self.__x_centroid - (dashed_height / 2))
+        top_left_point = (self.__x_centroid - (dashed_width / 2), self.__y_centroid + (dashed_height / 2))
+        top_right_point = (self.__x_centroid + (dashed_width / 2), self.__y_centroid + (dashed_height / 2))
+        bottom_left_point = (self.__x_centroid - (dashed_width / 2), self.__y_centroid - (dashed_height / 2))
+        bottom_right_point = (self.__x_centroid + (dashed_width / 2), self.__y_centroid - (dashed_height / 2))
         
         return [top_left_point, bottom_left_point, bottom_right_point, top_right_point]
     
@@ -110,10 +110,10 @@ class InsideRectangle:
         dotted_width = self.__width + (self.__offset * 4)
         dotted_height = self.__height + (self.__offset * 4)
         
-        top_left_point = (self.__x_centroid - (dotted_width / 2), self.__x_centroid + (dotted_height / 2))
-        top_right_point = (self.__x_centroid + (dotted_width / 2), self.__x_centroid + (dotted_height / 2))
-        bottom_left_point = (self.__x_centroid - (dotted_width / 2), self.__x_centroid - (dotted_height / 2))
-        bottom_right_point = (self.__x_centroid + (dotted_width / 2), self.__x_centroid - (dotted_height / 2))
+        top_left_point = (self.__x_centroid - (dotted_width / 2), self.__y_centroid + (dotted_height / 2))
+        top_right_point = (self.__x_centroid + (dotted_width / 2), self.__y_centroid + (dotted_height / 2))
+        bottom_left_point = (self.__x_centroid - (dotted_width / 2), self.__y_centroid - (dotted_height / 2))
+        bottom_right_point = (self.__x_centroid + (dotted_width / 2), self.__y_centroid - (dotted_height / 2))
         
         return [top_right_point, bottom_right_point, bottom_left_point, top_left_point]
     
@@ -121,9 +121,10 @@ class InsideRectangle:
         dotted_width = self.__width + (self.__offset * 4)
         dotted_height = self.__height + (self.__offset * 4)
         
-        top_left_point = (self.__x_centroid - (dotted_width / 2), self.__x_centroid + (dotted_height / 2))
-        top_right_point = (self.__x_centroid + (dotted_width / 2), self.__x_centroid + (dotted_height / 2))
-        bottom_left_point = (self.__x_centroid - (dotted_width / 2), self.__x_centroid - (dotted_height / 2))
-        bottom_right_point = (self.__x_centroid + (dotted_width / 2), self.__x_centroid - (dotted_height / 2))
+        top_left_point = (self.__x_centroid - (dotted_width / 2), self.__y_centroid + (dotted_height / 2))
+        top_right_point = (self.__x_centroid + (dotted_width / 2), self.__y_centroid + (dotted_height / 2))
+        bottom_left_point = (self.__x_centroid - (dotted_width / 2), self.__y_centroid - (dotted_height / 2))
+        bottom_right_point = (self.__x_centroid + (dotted_width / 2), self.__y_centroid - (dotted_height / 2))
         
         return [top_left_point, bottom_left_point, bottom_right_point, top_right_point]
+

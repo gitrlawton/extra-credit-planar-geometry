@@ -26,7 +26,7 @@ class OutsideCircle:
             )
         if offset <= 0:
             raise ValueError(
-                "OutsideCircle __init__ offset - must be a positive value."
+                "OutsideCircle.py __init__ offset - must be greater than 0."
             )
         if radius - (offset * 2) <= 0:
             raise ValueError(
@@ -107,3 +107,4 @@ class OutsideCircle:
         right_point = (self.__x_centroid + self.__radius - (self.__offset * 2), self.__y_centroid)
         
         return [top_point, left_point, bottom_point, right_point]
+    

@@ -26,7 +26,7 @@ class InsideCircle:
             )
         if offset <= 0:
             raise ValueError(
-                "InsideCircle __init__ offset - must be greater than 0."
+                "InsideCircle.py __init__ offset - must be greater than 0."
             )
         if type(x_centroid) is not float:
             raise TypeError(
